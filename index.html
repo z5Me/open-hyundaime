@@ -22,7 +22,11 @@
   </style>
   <script>
     function openApp() {
-      const appUrl = "hyundaime://VoucherDetail/voucb9cacfc5a96d89f2003";
+      const idVoucher = new URLSearchParams(window.location.search).get(
+        "idVoucher"
+      );
+      if (!idVoucher) return 
+      const appUrl = `hyundaime://VoucherDetail/${idVoucher}`;
       const playStoreUrl = "https://play.google.com/store/apps/details?id=com.flink.hi1";
       const appStoreUrl = "https://apps.apple.com/app/idXXXXXXXXX"; // thay id App Store thực tế vào đây
 
