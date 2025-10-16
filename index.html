@@ -28,10 +28,10 @@
       const idCate = new URLSearchParams(window.location.search).get("idCate");
       const nameCate = new URLSearchParams(window.location.search).get("nameCate");
       if (idVoucher) {
-        appUrl = `hyundaime://VoucherDetail?idVoucher=${idVoucher}`;
+        appUrl = `hyundaime://VoucherDetail?_t={Date.now()}&idVoucher=${idVoucher}`;
       }
       if(idProduct && idCate && nameCate) {
-        appUrl = `hyundaime://ProductDetail?idProduct=23860&idCate=cabub1e90ffad8f2999a517&nameCate=Deal%20%C4%90%E1%BB%99c%20Quy%E1%BB%81n`;
+        appUrl = `hyundaime://ProductDetail?_t=${Date.now()}&idProduct=23860&idCate=cabub1e90ffad8f2999a517&nameCate=Deal%20%C4%90%E1%BB%99c%20Quy%E1%BB%81n`;
       }
       const playStoreUrl = "https://play.google.com/store/apps/details?id=com.flink.hi1";
       const appStoreUrl = "https://apps.apple.com/app/id6479316591";
