@@ -29,6 +29,7 @@
       const nameCate = new URLSearchParams(window.location.search).get("nameCate");
       if (idVoucher) {
         appUrl = `hyundaime://VoucherDetail?idVoucher=${idVoucher}`;
+        console.log('Chạy vào idVoucher');
       }
       if(idProduct && idCate && nameCate) {
         appUrl = `hyundaime://ProductDetail?${idVoucher}`;
