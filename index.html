@@ -22,13 +22,21 @@
   </style>
   <script>
     function openApp() {
-      const idVoucher = new URLSearchParams(window.location.search).get(
-        "idVoucher"
-      );
-      if (!idVoucher) return 
-      const appUrl = `hyundaime://VoucherDetail/${idVoucher}`;
+      let appUrl = '';
+      const idVoucher = new URLSearchParams(window.location.search).get("idVoucher");
+      const idProduct = new URLSearchParams(window.location.search).get("idProduct");
+      const idCate = new URLSearchParams(window.location.search).get("idCate");
+      const nameCate = new URLSearchParams(window.location.search).get("nameCate");
+      if (idVoucher) {
+        appUrl = `hyundaime://VoucherDetail?idVoucher=${idVoucher}`;
+      }
+      if(idProduct && idCate && nameCate) {
+        appUrl = `hyundaime://ProductDetail?${idVoucher}`;
+      }
       const playStoreUrl = "https://play.google.com/store/apps/details?id=com.flink.hi1";
       const appStoreUrl = "https://apps.apple.com/app/id6479316591";
+
+      if()
 
       // Mở deeplink
       window.location.href = appUrl;
