@@ -7,7 +7,7 @@
   <meta property="og:title" content="" />
   <meta property="og:description" content="" />
   <title>Mở App Hi1</title>
-  <!-- <meta http-equiv="refresh" content="1;url=hyundaime://VoucherDetail/voucb9cacfc5a96d89f2003"> -->
+  <!-- <meta http-equiv="refresh" content="1;url=hi1://VoucherDetail/voucb9cacfc5a96d89f2003"> -->
   <style>
     body {
       font-family: sans-serif;
@@ -32,7 +32,7 @@
       const nameCate = new URLSearchParams(window.location.search).get("nameCate");
       //
       if(idProduct && idCate && nameCate) {
-        appUrl = `hyundaime://ProductDetail?idProduct=${idProduct}&idCate=${idCate}&nameCate=${nameCate}`;
+        appUrl = `hi1://ProductDetail?idProduct=${idProduct}&idCate=${idCate}&nameCate=${nameCate}`;
       }
       
       // Mở deeplink
@@ -50,6 +50,6 @@
 <body>
   <h2>Đang mở ứng dụng Hi1...</h2>
   <p>Nếu ứng dụng không tự mở, hãy bấm nút bên dưới:</p>
-  <!-- <a href="hyundaime://VoucherDetail/voucb9cacfc5a96d89f2003">Mở Hi1</a> -->
+  <!-- <a href="hi1://VoucherDetail/voucb9cacfc5a96d89f2003">Mở Hi1</a> -->
 </body>
 </html>
