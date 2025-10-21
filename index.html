@@ -38,10 +38,10 @@
       // Mở deeplink
       window.location.href = appUrl;
 
-      // Sau 1.5s nếu chưa vào app thì điều hướng đến website
+      // nếu chưa vào app thì điều hướng đến website
       setTimeout(() => {
         window.location.href = 'https://hi1.vn/';
-      }, 1500);
+      }, 2000);
     }
 
     window.onload = openApp;
