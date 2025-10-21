@@ -23,13 +23,10 @@
   <script>
     function openApp() {
       let appUrl = '';
-      const idVoucher = new URLSearchParams(window.location.search).get("idVoucher");
       const idProduct = new URLSearchParams(window.location.search).get("idProduct");
       const idCate = new URLSearchParams(window.location.search).get("idCate");
       const nameCate = new URLSearchParams(window.location.search).get("nameCate");
-      if (idVoucher) {
-        appUrl = `hyundaime://VoucherDetail?idVoucher=${idVoucher}`;
-      }
+      //
       if(idProduct && idCate && nameCate) {
         appUrl = `hyundaime://ProductDetail?idProduct=${idProduct}&idCate=${idCate}&nameCate=${nameCate}`;
       }
