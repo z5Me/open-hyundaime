@@ -27,7 +27,9 @@
   <script>
     function openApp() {
       let appUrl = '';
+      let webUrl = '';
       const idProduct = new URLSearchParams(window.location.search).get("idProduct");
+      const nameProduct = new URLSearchParams(window.location.search).get("nameProduct");
       const idVoucher = new URLSearchParams(window.location.search).get("idVoucher");
       //
       if(idProduct) {
@@ -41,7 +43,12 @@
 
       // nếu chưa vào app thì điều hướng đến website
       setTimeout(() => {
-        window.location.href = 'https://hi1.vn/';
+        if(idProduct && nameProduct) {
+          webUrl = `https://hi1.vn/${idProduct}/${nameProduct}`
+        } else {
+          webUrl = 'https://hi1.vn/'
+        }
+        window.location.href = webUrl;
       }, 2000);
     }
 
