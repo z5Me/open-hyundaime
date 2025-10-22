@@ -28,11 +28,14 @@
     function openApp() {
       let appUrl = '';
       const idProduct = new URLSearchParams(window.location.search).get("idProduct");
+      const idVoucher = new URLSearchParams(window.location.search).get("idVoucher");
       //
       if(idProduct) {
         appUrl = `hi1://ProductDetail?idProduct=${idProduct}`;
       }
-      
+      if(idVoucher) {
+        appUrl = `hi1://VoucherDetail?idVoucher=${idVoucher}`;
+      }
       // Mở deeplink
       window.location.href = appUrl;
 
