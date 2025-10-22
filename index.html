@@ -30,7 +30,9 @@
       let webUrl = '';
       const idProduct = new URLSearchParams(window.location.search).get("idProduct");
       const nameProduct = new URLSearchParams(window.location.search).get("nameProduct");
+      
       const idVoucher = new URLSearchParams(window.location.search).get("idVoucher");
+      const nameVoucher = new URLSearchParams(window.location.search).get("nameVoucher");
       //
       if(idProduct) {
         appUrl = `hi1://ProductDetail?idProduct=${idProduct}`;
@@ -44,9 +46,11 @@
       // nếu chưa vào app thì điều hướng đến website
       setTimeout(() => {
         if(idProduct && nameProduct) {
-          webUrl = `https://hi1.vn/san-pham/${idProduct}/${nameProduct}`
+          webUrl = `https://hi1.vn/san-pham/${idProduct}/${nameProduct}`;
+        } else if (idVoucher && nameVoucher) {
+          webUrl = `https://hi1.vn/voucher/${idVoucher}/${nameVoucher}`;
         } else {
-          webUrl = 'https://hi1.vn/'
+          webUrl = 'https://hi1.vn/';
         }
         window.location.href = webUrl;
       }, 2000);
