@@ -28,10 +28,8 @@
     function openApp() {
       let appUrl = '';
       const idProduct = new URLSearchParams(window.location.search).get("idProduct");
-      const idCate = new URLSearchParams(window.location.search).get("idCate");
-      const nameCate = new URLSearchParams(window.location.search).get("nameCate");
       //
-      if(idProduct && idCate && nameCate) {
+      if(idProduct) {
         appUrl = `hi1://ProductDetail?idProduct=${idProduct}&idCate=${idCate}&nameCate=${nameCate}`;
       }
       
